@@ -7,14 +7,22 @@ VN Armor
   "ifid": "D9176B8F-97CE-4187-9DC9-299C24A0B882",
   "format": "Harlowe",
   "format-version": "3.3.8",
-  "start": "SO COOL PIERRE",
+  "start": "Réveil difficile",
   "zoom": 1
 }
 
 
-:: Choix cool {"position":"300,200","size":"100,100"}
+:: Essayer de se souvenir {"position":"400,200","size":"100,100"}
 
 
 
-:: SO COOL PIERRE {"position":"100,200","size":"100,100"}
-THIS IS SOME TEST STUFF
+:: Ouvrir les yeux {"position":"250,200","size":"100,100"}
+*J'essaie d'ouvrir les yeux mais rien ne vient, la panique me prend aux tripes, Qu'est-ce que je peux faire ?*
+
+[[Essayer de se souvenir]]
+
+
+:: Réveil difficile {"position":"100,200","size":"100,100"}
+*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça.*
+
+[[Ouvrir les yeux]]
