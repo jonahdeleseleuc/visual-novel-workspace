@@ -12,12 +12,14 @@ VN Armor
 }
 
 
-:: Essayer de se souvenir {"position":"400,200","size":"100,100"}
+:: Essayer de se souvenir {"position":"350,200","size":"100,100"}
+*J'essaie de me rappeler de qui je suis ou de pourquoi je suis là mais mon corps me brûle dès que je m'apprête à soulever ce voile sur mes souvenirs. J'essaie encore et encore mais rien ne me reviens, j'ai l'impression de me déchirer en mille morceaux, mon esprit s'effondre...*
+
+[[Tu t'évanouis]]
 
 
-
-:: Ouvrir les yeux {"position":"250,200","size":"100,100"}
-*J'essaie d'ouvrir les yeux mais rien ne vient, la panique me prend aux tripes, Qu'est-ce que je peux faire ?*
+:: Ouvrir les yeux {"position":"225,200","size":"100,100"}
+*J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun des mes ordres n'arrivent à destination. La panique me prend aux tripes: que se passe-t-il ? qu'est-ce que je peux faire ?*
 
 [[Essayer de se souvenir]]
 
@@ -26,3 +28,7 @@ VN Armor
 *Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça.*
 
 [[Ouvrir les yeux]]
+
+
+:: Tu t'évanouis {"position":"475,200","size":"100,100"}
+*Je me réveille, combien de temps est passé ? Je ne pense pas avoir bougé. Il faut tout reprendre depuis le début, je verrai après pour mes souvenirs lacunaires.*
