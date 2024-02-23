@@ -19,7 +19,7 @@ VN Armor
 
 
 :: Ouvrir les yeux {"position":"225,200","size":"100,100"}
-*J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun des mes ordres n'arrivent à destination. La panique me prend aux tripes: que se passe-t-il ? qu'est-ce que je peux faire ?*
+*J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun de mes ordres n'arrivent à destination. La panique me prend aux tripes: Que se passe-t-il ? Qu'est-ce qu'y m'est arrivé ?*
 
 [[Essayer de se souvenir]]
 
@@ -30,5 +30,17 @@ VN Armor
 [[Ouvrir les yeux]]
 
 
+:: Tu décides de suivre la créature en clopinant {"position":"725,200","size":"100,100"}
+
+
+
 :: Tu t'évanouis {"position":"475,200","size":"100,100"}
-*Je me réveille, combien de temps est passé ? Je ne pense pas avoir bougé. Il faut tout reprendre depuis le début, je verrai après pour mes souvenirs lacunaires.*
+*Je me réveille, combien de temps est passé ? Je ne pense pas avoir bougé. Il faut tout reprendre depuis le début, je verrai après pour mes souvenirs lacunaires. Comment je faisais pour bouger ? Pour ouvrir mes yeux ? Je dois me rappeler...pense...PENSE !* 
+
+[[Une énergie étrange se répand à travers toi]]
+
+
+:: Une énergie étrange se répand à travers toi {"position":"600,200","size":"100,100"}
+*J'ai l'impression que mon corps tout entier est en feu mais j'arrive enfin à bouger. Tandis que je me relève difficilement, je m'acclimate doucement à l'obscurité environnante. Mon corps grince, craque et crisse comme les gonds d'une porte mal huilée. Le brouillard devant mes yeux se dissipe lentement et je remarque une petite créature qui me fixe depuis un coin de la pièce. Je m'approche doucement d'elle cherchant à identifier ce que c'est, mais elle fuit dès que je m'approche. J'ai le profond sentiment que je dois la suivre, est-ce qu'elle serait liée à mon passé ?* 
+
+[[Tu décides de suivre la créature en clopinant]]
