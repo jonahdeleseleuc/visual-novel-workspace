@@ -25,9 +25,11 @@ VN Armor
 
 
 :: Réveil difficile {"position":"100,200","size":"100,100"}
-*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça.*
+*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça TEST.*
 
 [[Ouvrir les yeux]]
+
+
 
 
 :: Tu décides de suivre la créature en clopinant {"position":"725,200","size":"100,100"}
@@ -44,3 +46,11 @@ VN Armor
 *J'ai l'impression que mon corps tout entier est en feu mais j'arrive enfin à bouger. Tandis que je me relève difficilement, je m'acclimate doucement à l'obscurité environnante. Mon corps grince, craque et crisse comme les gonds d'une porte mal huilée. Le brouillard devant mes yeux se dissipe lentement et je remarque une petite créature qui me fixe depuis un coin de la pièce. Je m'approche doucement d'elle cherchant à identifier ce que c'est, mais elle fuit dès que je m'approche. J'ai le profond sentiment que je dois la suivre, est-ce qu'elle serait liée à mon passé ?* 
 
 [[Tu décides de suivre la créature en clopinant]]
+
+
+:: StoryStylesheet [stylesheet]
+body {
+	background-image: url("images/biomes/beach/beach_pix_1");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
