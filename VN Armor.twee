@@ -8,6 +8,9 @@ VN Armor
   "format": "Harlowe",
   "format-version": "3.3.8",
   "start": "Réveil difficile",
+  "tag-colors": {
+    "beach": "blue"
+  },
   "zoom": 1
 }
 
@@ -24,8 +27,8 @@ VN Armor
 [[Essayer de se souvenir]]
 
 
-:: Réveil difficile {"position":"100,200","size":"100,100"}
-*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça TEST.*
+:: Réveil difficile [beach] {"position":"100,200","size":"100,100"}
+*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça HAHAHA.*
 
 [[Ouvrir les yeux]]
 
@@ -49,8 +52,8 @@ VN Armor
 
 
 :: StoryStylesheet [stylesheet]
-body {
-	background-image: url("images/biomes/beach/beach_pix_1");
+tw-story[tags="beach"]{
+  	background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/beach/beach_pix_1/beach_var_00.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
