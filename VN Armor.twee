@@ -9,19 +9,25 @@ VN Armor
   "format-version": "3.3.8",
   "start": "Réveil difficile",
   "tag-colors": {
-    "beach": "blue"
+    "beach": "blue",
+    "forest": "green"
   },
   "zoom": 1
 }
 
 
-:: Essayer de se souvenir {"position":"350,200","size":"100,100"}
+:: Essayer de se souvenir [beach] {"position":"350,200","size":"100,100"}
+<!--Pas de personnage ici-->
+
 *J'essaie de me rappeler de qui je suis ou de pourquoi je suis là mais mon corps me brûle dès que je m'apprête à soulever ce voile sur mes souvenirs. J'essaie encore et encore mais rien ne me reviens, j'ai l'impression de me déchirer en mille morceaux, mon esprit s'effondre...*
 
 [[Tu t'évanouis]]
 
 
-:: Ouvrir les yeux {"position":"225,200","size":"100,100"}
+:: Ouvrir les yeux [forest] {"position":"225,200","size":"100,100"}
+<!--Noodle man here->
+
+
 *J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun de mes ordres n'arrivent à destination. La panique me prend aux tripes: Que se passe-t-il ? Qu'est-ce qu'y m'est arrivé ?*
 
 [[Essayer de se souvenir]]
@@ -52,8 +58,33 @@ VN Armor
 
 
 :: StoryStylesheet [stylesheet]
+/*TAG BACKGROUND IMAGE STYLES*/
 tw-story[tags="beach"]{
   	background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/beach/beach_pix_1/beach_var_00.png");
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+tw-story[tags="forest"]{
+  	background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/forest/forest_pix_1/forest_var_00.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*THIS IS THE PASSAGE STYLINGS*/
+
+tw-passage{
+  width: 80%;
+  min-height: 300px;
+  max-height: 500px;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  border: 2px black solid;
+  font-weight: 600;
+  margin-left: auto; 
+  margin-right: auto;
 }
