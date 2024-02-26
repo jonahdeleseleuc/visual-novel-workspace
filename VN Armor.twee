@@ -24,16 +24,13 @@ VN Armor
 [[Tu t'évanouis]]
 
 
-:: Ouvrir les yeux [forest] {"position":"225,200","size":"100,100"}
-<!--Noodle man here->
-
-
+:: Ouvrir les yeux [forest female_00_neutral] {"position":"225,200","size":"100,100"}
 *J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun de mes ordres n'arrivent à destination. La panique me prend aux tripes: Que se passe-t-il ? Qu'est-ce qu'y m'est arrivé ?*
 
 [[Essayer de se souvenir]]
 
 
-:: Réveil difficile [beach] {"position":"100,200","size":"100,100"}
+:: Réveil difficile [male_00_neutral beach] {"position":"100,200","size":"100,100"}
 *Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça HAHAHA.*
 
 [[Ouvrir les yeux]]
@@ -58,33 +55,101 @@ VN Armor
 
 
 :: StoryStylesheet [stylesheet]
-/*TAG BACKGROUND IMAGE STYLES*/
-tw-story[tags="beach"]{
-  	background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/beach/beach_pix_1/beach_var_00.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-tw-story[tags="forest"]{
-  	background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/forest/forest_pix_1/forest_var_00.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+tw-story{
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/*THIS IS THE PASSAGE STYLINGS*/
+tw-story::before{
+  /*If you remove the empty string for content, the ::before element doesn't render*/
+  content: "";
+  /*z index needs to be in front of bg image but behind the passage*/
+  z-index: 0;
+  margin: 0 auto;
+  height: 100vh;
+  width: 33vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*CHARACTER TAGS */
+
+/*MALE 00 */
+
+tw-story[tags~="male_00_neutral"]::before{
+  background-image: url('https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/characters/male_00/neutral.png');
+}
+tw-story[tags~="male_00_happy"]::before{
+  background-image: url('https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/characters/male_00/neutral.png');
+}
+tw-story[tags~="male_00_sad"]::before{
+  background-image: url('https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/characters/male_00/neutral.png');
+}
+tw-story[tags~="male_00_angry"]::before{
+  background-image: url('https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/characters/male_00/neutral.png');
+}
+
+/*FEMALE 00 */
+
+tw-story[tags~="female_00_neutral"]::before{
+  background-image: url('https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/characters/female_00/neutral.png');
+}
+tw-story[tags~="female_00_happy"]::before{
+  background-image: url('https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/characters/female_00/neutral.png');
+}
+tw-story[tags~="female_00_sad"]::before{
+  background-image: url('https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/characters/female_00/neutral.png');
+}
+tw-story[tags~="female_00_angry"]::before{
+  background-image: url('https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/characters/female_00/neutral.png');
+}
+
+/*BACKGROUND TAGS*/
+
+tw-story[tags~="beach"]{
+  background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/beach/beach_pix_1/beach_var_00.png");
+}
+tw-story[tags~="forest"]{
+  background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/forest/forest_pix_1/forest_var_00.png");
+}
+
+/*PASSAGE STYLES*/
 
 tw-passage{
-  width: 80%;
-  min-height: 300px;
-  max-height: 500px;
-  background-color: rgba(255, 255, 255, 0.75);
-  color: black;
-  position: absolute;
+  width: 100%;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  margin: 0 auto;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
   padding: 30px;
   border: 2px black solid;
   font-weight: 600;
-  margin-left: auto; 
-  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  tw-passage{
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  tw-passage{
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  tw-passage{
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  tw-passage{
+    width: 80%;
+  }
 }
