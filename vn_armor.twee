@@ -7,7 +7,7 @@ VN Armor
   "ifid": "D9176B8F-97CE-4187-9DC9-299C24A0B882",
   "format": "Harlowe",
   "format-version": "3.3.8",
-  "start": "Réveil difficile",
+  "start": "main menu",
   "tag-colors": {
     "beach": "blue",
     "forest": "green",
@@ -17,81 +17,117 @@ VN Armor
 }
 
 
-:: Essayer de se souvenir [beach male_00_neutral] {"position":"350,200","size":"100,100"}
+:: a_001 [forest female_00_neutral no_sound] {"position":"225,200","size":"100,100"}
+*J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun de mes ordres n'arrivent à destination. La panique me prend aux tripes: Que se passe-t-il ? Qu'est-ce qu'y m'est arrivé ?*
+
+[[YOUR MESSAGE HERE->a_002]]
+
+
+:: a_002 [beach male_00_neutral] {"position":"350,200","size":"100,100"}
 <!--Pas de personnage ici-->
 
 *J'essaie de me rappeler de qui je suis ou de pourquoi je suis là mais mon corps me brûle dès que je m'apprête à soulever ce voile sur mes souvenirs. J'essaie encore et encore mais rien ne me reviens, j'ai l'impression de me déchirer en mille morceaux, mon esprit s'effondre...*
 
-[[Tu t'évanouis]]
+[[YOUR MESSAGE HERE->a_003]]
 
 
-:: Ouvrir les yeux [forest female_00_neutral] {"position":"225,200","size":"100,100"}
-*J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun de mes ordres n'arrivent à destination. La panique me prend aux tripes: Que se passe-t-il ? Qu'est-ce qu'y m'est arrivé ?*
-
-[[Essayer de se souvenir]]
-
-
-:: Réveil difficile [male_00_neutral beach] {"position":"100,200","size":"100,100"}
-*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça HAHAHA.*
-
-[[Ouvrir les yeux]]
-
-
-
-
-:: Tu décides de suivre la créature en clopinant {"position":"725,200","size":"100,100"}
-
-
-
-:: Tu t'évanouis {"position":"475,200","size":"100,100"}
+:: a_003 {"position":"475,200","size":"100,100"}
 *Je me réveille, combien de temps est passé ? Je ne pense pas avoir bougé. Il faut tout reprendre depuis le début, je verrai après pour mes souvenirs lacunaires. Comment je faisais pour bouger ? Pour ouvrir mes yeux ? Je dois me rappeler...pense...PENSE !* 
 
-[[Une énergie étrange se répand à travers toi]]
+[[YOUR MESSAGE HERE->a_004]]
 
 
-:: Une énergie étrange se répand à travers toi {"position":"600,200","size":"100,100"}
+:: a_004 {"position":"600,200","size":"100,100"}
 *J'ai l'impression que mon corps tout entier est en feu mais j'arrive enfin à bouger. Tandis que je me relève difficilement, je m'acclimate doucement à l'obscurité environnante. Mon corps grince, craque et crisse comme les gonds d'une porte mal huilée. Le brouillard devant mes yeux se dissipe lentement et je remarque une petite créature qui me fixe depuis un coin de la pièce. Je m'approche doucement d'elle cherchant à identifier ce que c'est, mais elle fuit dès que je m'approche. J'ai le profond sentiment que je dois la suivre, est-ce qu'elle serait liée à mon passé ?* 
 
-[[Tu décides de suivre la créature en clopinant]]
+[[YOUR MESSAGE HERE->a_005]]
+
+
+:: a_005 {"position":"725,200","size":"100,100"}
+
+
+
+:: main menu [menu] {"position":"100,375","size":"100,100"}
+[[Start Game->start]]
+
+
+:: start [male_00_neutral beach test_mp3] {"position":"100,200","size":"100,100"}
+*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça HAHAHA.*
+
+[[YOUR MESSAGE HERE->a_001]]
+
+
 
 
 :: StoryScript [script]
-// Function to check if Howler.js is already loaded on the page
+// AUDIO HANDLER
 function isHowlerLoaded() {
-    return typeof Howler !== 'undefined';
+  return typeof Howler !== 'undefined';
 }
 
-// Function to include Howler.js if it's not already loaded
-function includeHowler() {
-    if (!isHowlerLoaded()) {
-        const script = document.createElement('script');
-        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js';
-        script.id = 'howler-script';
-        document.head.appendChild(script);
-        console.log('Howler is now loaded')
-    }
-    else{
-      console.log('Howler is already loaded')
-    }
+function includeHowler(callback) {
+  if (isHowlerLoaded()) {
+    console.log('Howler is already loaded');
+    callback(); // Call the callback function if Howler is already loaded
+  } else {
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js';
+    script.id = 'howler-script';
+
+    // Callback function to execute after script is loaded
+    script.onload = () => {
+      console.log('Howler is now loaded');
+      callback(); // Call the callback function after Howler is loaded
+    };
+
+    document.head.appendChild(script);
+  }
 }
 
-// Check if Howler.js is already loaded and include it if not
-includeHowler();
+function getSong(song, mode) {
+  const songs = {
+    "test_mp3": {
+      "url": "https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/audio/test.mp3"
+    }
+  };
+  if (mode === "lookup") return songs.hasOwnProperty(song);
+  else if (mode === "get") {
+    console.log(songs[song].url);
+    return songs[song].url;
+  } else return false;
+}
 
-// Select the element to observe
+function playSong(song){
+  includeHowler(() => {
+    const audioUrl = getSong(song, "get");
+
+    const sound = new Howl({
+      src: [audioUrl],
+      html5: true // Force to use HTML5 audio
+    });
+
+    sound.play();
+  });
+}
+
+function stopMusic(){
+	Howler.stop();
+}
+
+
 const targetElement = document.querySelector('tw-story');
 
-
-// Create a new MutationObserver
 const observer = new MutationObserver(mutationsList => {
-  for(let mutation of mutationsList) {
+  for (let mutation of mutationsList) {
     if (mutation.type === 'attributes' && mutation.attributeName === 'tags') {
+      const tags = mutation.target.getAttribute("tags").split(" ");
 
-      const tags = mutation.target.getAttribute("tags").split(" ")
-      
       tags.forEach(item => {
-        //play song here
-      })
+        if (getSong(item, "lookup")) {
+          playSong(item)
+        }
+        else if(item === "no_sound") stopMusic()
+      });
     }
   }
 });
@@ -106,6 +142,8 @@ const config = {
 
 // Start observing the target element
 observer.observe(targetElement, config);
+
+// END AUDIO HANDLER
 
 
 :: StoryStylesheet [stylesheet]
@@ -206,4 +244,10 @@ tw-passage{
   tw-passage{
     width: 80%;
   }
+}
+
+/*MENU*/
+
+tw-passage[tags="menu"]{
+
 }
