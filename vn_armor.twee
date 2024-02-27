@@ -1,5 +1,5 @@
 :: StoryTitle
-VN Armor
+vn_armor
 
 
 :: StoryData
@@ -52,11 +52,9 @@ VN Armor
 
 
 :: start [male_00_neutral beach test_mp3] {"position":"100,200","size":"100,100"}
-*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça HAHAHA.*
+*Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça....*
 
-[[YOUR MESSAGE HERE->a_001]]
-
-
+[[Ouvre les yeux->a_001]]
 
 
 :: StoryScript [script]
@@ -144,7 +142,6 @@ const config = {
 observer.observe(targetElement, config);
 
 // END AUDIO HANDLER
-
 
 :: StoryStylesheet [stylesheet]
 tw-story{
