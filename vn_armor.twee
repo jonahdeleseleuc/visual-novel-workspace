@@ -10,13 +10,14 @@ VN Armor
   "start": "Réveil difficile",
   "tag-colors": {
     "beach": "blue",
-    "forest": "green"
+    "forest": "green",
+    "female_00_neutral": ""
   },
   "zoom": 1
 }
 
 
-:: Essayer de se souvenir [beach] {"position":"350,200","size":"100,100"}
+:: Essayer de se souvenir [beach male_00_neutral] {"position":"350,200","size":"100,100"}
 <!--Pas de personnage ici-->
 
 *J'essaie de me rappeler de qui je suis ou de pourquoi je suis là mais mon corps me brûle dès que je m'apprête à soulever ce voile sur mes souvenirs. J'essaie encore et encore mais rien ne me reviens, j'ai l'impression de me déchirer en mille morceaux, mon esprit s'effondre...*
@@ -52,6 +53,59 @@ VN Armor
 *J'ai l'impression que mon corps tout entier est en feu mais j'arrive enfin à bouger. Tandis que je me relève difficilement, je m'acclimate doucement à l'obscurité environnante. Mon corps grince, craque et crisse comme les gonds d'une porte mal huilée. Le brouillard devant mes yeux se dissipe lentement et je remarque une petite créature qui me fixe depuis un coin de la pièce. Je m'approche doucement d'elle cherchant à identifier ce que c'est, mais elle fuit dès que je m'approche. J'ai le profond sentiment que je dois la suivre, est-ce qu'elle serait liée à mon passé ?* 
 
 [[Tu décides de suivre la créature en clopinant]]
+
+
+:: StoryScript [script]
+// Function to check if Howler.js is already loaded on the page
+function isHowlerLoaded() {
+    return typeof Howler !== 'undefined';
+}
+
+// Function to include Howler.js if it's not already loaded
+function includeHowler() {
+    if (!isHowlerLoaded()) {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js';
+        script.id = 'howler-script';
+        document.head.appendChild(script);
+        console.log('Howler is now loaded')
+    }
+    else{
+      console.log('Howler is already loaded')
+    }
+}
+
+// Check if Howler.js is already loaded and include it if not
+includeHowler();
+
+// Select the element to observe
+const targetElement = document.querySelector('tw-story');
+
+
+// Create a new MutationObserver
+const observer = new MutationObserver(mutationsList => {
+  for(let mutation of mutationsList) {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'tags') {
+
+      const tags = mutation.target.getAttribute("tags").split(" ")
+      
+      tags.forEach(item => {
+        //play song here
+      })
+    }
+  }
+});
+
+// Configuration of the observer
+const config = {
+  attributes: true, // observe attribute changes
+  attributeFilter: ['tags'], // only observe changes to the "tags" attribute
+  childList: false,
+  subtree: false
+};
+
+// Start observing the target element
+observer.observe(targetElement, config);
 
 
 :: StoryStylesheet [stylesheet]
