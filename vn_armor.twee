@@ -17,43 +17,50 @@ vn_armor
 }
 
 
-:: a_001 [forest female_00_neutral no_sound] {"position":"225,200","size":"100,100"}
+:: a_001 [forest female_00_neutral no_sound] {"position":"225,25","size":"100,100"}
 *J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun de mes ordres n'arrivent à destination. La panique me prend aux tripes: Que se passe-t-il ? Qu'est-ce qu'y m'est arrivé ?*
-
+<!--Pas de personnage ici, space background-->
 [[YOUR MESSAGE HERE->a_002]]
 
 
-:: a_002 [beach male_00_neutral] {"position":"350,200","size":"100,100"}
-<!--Pas de personnage ici-->
-
+:: a_002 [beach male_00_neutral] {"position":"350,25","size":"100,100"}
 *J'essaie de me rappeler de qui je suis ou de pourquoi je suis là mais mon corps me brûle dès que je m'apprête à soulever ce voile sur mes souvenirs. J'essaie encore et encore mais rien ne me reviens, j'ai l'impression de me déchirer en mille morceaux, mon esprit s'effondre...*
+<!--Pas de personnage ici, space background-->
+[[Tu t'évanouis->a_003]]
 
-[[YOUR MESSAGE HERE->a_003]]
 
-
-:: a_003 {"position":"475,200","size":"100,100"}
+:: a_003 {"position":"475,25","size":"100,100"}
 *Je me réveille, combien de temps est passé ? Je ne pense pas avoir bougé. Il faut tout reprendre depuis le début, je verrai après pour mes souvenirs lacunaires. Comment je faisais pour bouger ? Pour ouvrir mes yeux ? Je dois me rappeler...pense...PENSE !* 
+<!--Low pixel quality cavernous biome-->
+[[Une énergie étrange te parcours->a_004]]
 
-[[YOUR MESSAGE HERE->a_004]]
 
-
-:: a_004 {"position":"600,200","size":"100,100"}
+:: a_004 {"position":"600,25","size":"100,100"}
 *J'ai l'impression que mon corps tout entier est en feu mais j'arrive enfin à bouger. Tandis que je me relève difficilement, je m'acclimate doucement à l'obscurité environnante. Mon corps grince, craque et crisse comme les gonds d'une porte mal huilée. Le brouillard devant mes yeux se dissipe lentement et je remarque une petite créature qui me fixe depuis un coin de la pièce. Je m'approche doucement d'elle cherchant à identifier ce que c'est, mais elle fuit dès que je m'approche. J'ai le profond sentiment que je dois la suivre, est-ce qu'elle serait liée à mon passé ?* 
-
-[[YOUR MESSAGE HERE->a_005]]
-
-
-:: a_005 {"position":"725,200","size":"100,100"}
+<!--Low pixel quality cavernous biome, Noody's shade-->
+[[Tu suis la créature en clopinant->a_005]]
 
 
+:: a_005 {"position":"725,25","size":"100,100"}
+*L'ombre de la créature me guide à travers ce dédale de couloirs exigus, éclairés par la lumière filtrant à travers les vieilles pierres. Je cours encore et encore sans discontinuer, j'ai l'impression que je pourrai aller jusqu'au bout du monde comme ça, le poids qui pesaient sur mes épaules s'envolent, j'ai l'impression de me réveiller d'un long sommeil.*
 
-:: main menu [menu] {"position":"100,375","size":"100,100"}
+[[Regarde où tu marches !->a_006]]
+
+
+
+:: a_006 {"position":"725,150","size":"100,100"}
+*Je manque de trébucher plusieurs fois sur des marches qui semblent sans fin, mon corps tremble d'excitation à l'idée d'enfin sortir d'ici...mais depuis combien de temps je suis au fond de ce labyrinthe au fait ?*
+
+
+:: main menu [menu] {"position":"100,225","size":"100,100"}
+<!--Spinning planet ?-->
+
 [[Start Game->start]]
 
 
-:: start [male_00_neutral beach test_mp3] {"position":"100,200","size":"100,100"}
+:: start [male_00_neutral beach test_mp3] {"position":"100,25","size":"100,100"}
 *Je reprends conscience et la première chose que je sens c'est...le froid ? Le froid et la douleur oui c'est ça....*
-
+<!--Pas de personnage ici, space background-->
 [[Ouvre les yeux->a_001]]
 
 
