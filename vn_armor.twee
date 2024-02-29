@@ -17,6 +17,12 @@ vn_armor
 }
 
 
+:: a-009 {"position":"350,150","size":"100,100"}
+*Alors que je me relève, je me rends compte que mon bras gauche à disparu, pas dans un sens figuré, il y a du vide à la place de celui-ci. Malgré le grand soleil et la beauté du paysage, il n'y a que de l'angoisse dans mon coeur : mon corps...mon corps a toujours été comme ça ?*
+
+[[Ton bras est toujours là, à quelques mètres->a_010]]
+
+
 :: a_001 [forest female_00_neutral no_sound] {"position":"225,25","size":"100,100"}
 *J'essaie d'ouvrir les yeux mais je ne sens plus mes paupières. Que faire ? il faut que je bouge mais aucun de mes ordres n'arrivent à destination. La panique me prend aux tripes: Que se passe-t-il ? Qu'est-ce qu'y m'est arrivé ?*
 <!--Pas de personnage ici, space background-->
@@ -50,6 +56,30 @@ vn_armor
 
 :: a_006 {"position":"725,150","size":"100,100"}
 *Je manque de trébucher plusieurs fois sur des marches qui semblent sans fin, mon corps tremble d'excitation à l'idée d'enfin sortir d'ici...mais depuis combien de temps je suis au fond de ce labyrinthe au fait ?*
+
+[[Ne t'arrête pas->a_007]]
+
+
+:: a_007 {"position":"600,150","size":"100,100"}
+*C'est sur cette pensée que je finis ma course dans un grand fracas, les pieds dans les gravats, je me suis effondré la tête la première vers le monde extérieur*
+
+[[Badaboum->a_008]]
+
+
+:: a_008 {"position":"475,150","size":"100,100"}
+*A mon réveil, mon premier réflexe fut de suivre cette mystérieuse créature, je ne sais pas pourquoi j'étais tellement obnubilé par elle que j'en ai même oublié de m'osculter...mais la réalité m'a bien vite rattrapé. Au moment de ma chute il n'y a eu aucune douleur, juste une sensation de lourdeur terrible...et un sentiment de manque.*
+<!--Stressful music-->
+[[Tu n'as pas à avoir peur->a-009]]
+
+
+:: a_010 {"position":"225,150","size":"100,100"}
+*Au sol, je vois un gantelet d'armure à l'aspect vieillot, une horrible pensée me traverse. Pour la première fois je regarde ma main, mon...enveloppe. Une lourde armure me recouvre entièrement pourtant je n'ai jamais senti son poids avant, ce qui est sûr c'est que ce gantelet au sol fait partie de cette armure...*
+
+[[Regarde moi->a_011]]
+
+
+:: a_011 {"position":"225,275","size":"100,100"}
+*Ça ne peut pas être vrai, c'est forcément faux. J'observe les ruines aux alentours espérant trouver quelque chose pouvant éloigner mes craintes *
 
 
 :: main menu [menu] {"position":"100,225","size":"100,100"}
