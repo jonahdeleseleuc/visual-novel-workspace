@@ -80,7 +80,19 @@ vn_armor
 
 
 :: a_011 [ruins] {"position":"225,275","size":"100,100"}
-*Ça ne peut pas être vrai, c'est forcément faux. J'observe les ruines aux alentours espérant trouver quelque chose pouvant éloigner mes craintes *
+*Ça ne peut pas être vrai, c'est forcément faux. J'observe les ruines aux alentours espérant trouver quelque chose pouvant éloigner mes craintes. Là, au coin d'un mur, les débris immémoriaux d'un miroir. Je me saisis d'un des morceaux et constate la triste réalité, ma tête aussi est recouverte, pourtant ma vision est parfaitement claire. La chaleur que je ressentait à mon réveil était revenu, encore plus forte...j'enlève mon casque.*
+<!--Main character sprite-->
+[[Regarde moi !->a_012]]
+
+
+:: a_012 [ruins] {"position":"350,275","size":"100,100"}
+*Rien...rien du tout...le vide...je ne vois rien sous mon casque...je veux crier...aucun son...je veux pleurer...aucune larme...le vide froid...j'ai chaud...j'ai chaud...J'AI CHAUD...je ne veux pas y croire...je veux mourir...il n'y a rien à tuer...j'ai chaud...non...non...non...NON...NON...ça n'est pas MOI, je le sais...je ne suis pas rien...JE NE SUIS PAS UNE ARMURE !*
+
+[[REGARDE MOI->a_013]]
+
+
+:: a_013 {"position":"475,275","size":"100,100"}
+jjjjjj
 
 
 :: main menu [menu] {"position":"100,225","size":"100,100"}
