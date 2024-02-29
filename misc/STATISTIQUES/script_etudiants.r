@@ -3,19 +3,8 @@
 ##                      TP biostats                          ##
 ##                  Script R à compléter                     ##
 ###############################################################
+########### START OF TP ON FEB 15 2024 ##############################################
 
-###############
-## Démarrage ##
-###############
-
-# Prise en main de R -----
-
-3+4
-
-
-################################################ START OF TP ON FEB 15 2024 ##############################################
-
-data <- read.csv("/media/crunchy/Crunchy USB/2024-Documents-TPbiostats/data.csv", sep=";", stringsAsFactors=TRUE)
 
 data_2023 = subset(data, Annee == "2023")
 data_2023 = droplevels(data_2023)
@@ -69,7 +58,7 @@ cor.test(tolog, data_2023$Nb_tubu, method="spearman", alternative="greater")
 
 ################################################ END OF TP ON FEB 15 2024 ##############################################
 
-################################################ DOING EXERCIES ON MY OWN ON FEB 16 2024 ###############################
+################################################ TP FEB 29 2024 ###############################
 
 # Exercice 2 : Le nombre de fleurs tubulées des pâquerettes de milieu semi-urbain est-il le
 #même durant l'été 2021 et au printemps 2023 ?
@@ -78,105 +67,65 @@ data_su = subset(data, Milieu == "Semi-urbain")
 #Now we are going to make a boxplot from the subset we created
 boxplot(Nb_tubu ~ Annee, data = data_su, xlab = "YEAR", ylab =" NUMBER OF TUBUS", col="#f4bcd1")
 
+Nb_tubu_2021 = subset(data_su$Nb_tubu, data_su$Annee == "2021")
 
-
-
-
-
-################################################# END OF DOING MY OWN EXERCIES ON FEB 16 2024 ##########################
-
-
-
-# tapez ici une autre opération de votre choix et affichez son résultat
-
-
-# Les objets dans R -----
-
-objet1 = 3 + 4 
-# tapez ici la commande permettant d'afficher le contenu de objet 1
-# tapez ici une commande permettant de calculer objet 2 (cf. poly)
-
-
-# Importation du tableau de données -----
-
-# utilisez le menu "Import dataset" pour importer le tableau de données (cf. poly)
-# recopiez ici les 2 lignes de commande apparues dans la console lors de l'importation (sans le symbole >)
-
-
-# Description des données -----
-summary(data_paq)
-
-
-################
-## EXERCICE 1 ##
-################
-
-# Le nombre de fleurs ligulées et le nombre de fleurs tubulées des pâquerettes prélevées en 2023 sont-ils liés ? -----
-
-data_2023 = subset(data_paq, Annee=="2023")
-
-plot(Nb_ligu ~ Nb_tubu, data=data_2023)
-# remplacez les ??? dans la commande ci-dessous pour ajouter un titre explicite au graphique tracé
-plot(Nb_ligu ~ Nb_tubu, data=data_2023, main = "???")
-# tapez ici la commande permettant de reproduire ce graphique avec un titre explicite aux axes des abcisses et des ordonnées, un titre général et les points en bleu (cf. poly)
-
-data_2023$Nb_ligu
-
-par(mfrow=c(1,2))
-# remplacez les ??? dans la commande ci-dessous permettant de visualiser la distribution du nombre de fleurs ligulées
-hist(???)
-# tapez ici la commande permettant de tracer le même graphique pour le nombre de fleurs tubulées
-
-# remplacez les ??? dans la commande ci-dessous permettant de réaliser le test de Shapiro pour le nombre de fleurs ligulées
-shapiro.test(???)
-# tapez ici la commande permettant de réaliser le même test pour le nombre de fleurs tubulées
-
-log(data_2023$Nb_ligu)
-
-par(mfrow=c(1,1))
-# tapez ici la commande permettant de visualiser la distribution du nombre de fleurs ligulées transformé en logarithme
-# tapez ici la commande permettant de réaliser le test de Shapiro pour le nombre de fleurs ligulées transformé en logarithme
-
-# en vous aidant de l'aide, remplacez les ??? de la commande ci-dessous afin de réaliser un test de corrélation paramétrique :
-?cor.test
-cor.test(log(data_2023$Nb_ligu), data_2023$Nb_tubu, method="???")
-# recopiez ici la commande précédente et ajoutez-y l'argument alternative = "greater"
-# tapez ici la commande permettant de réaliser le test de corrélation non-paramétrique
-
-
-################
-## EXERCICE 2 ##
-################
-
-# Le nombre de fleurs tubulées des pâquerettes prélevées durant l'été 2021 et au printemps 2023 dans le milieu semi-urbain est-il le même ? ------
-
-# tapez ici la commande permettant de construire un sous-tableau nommé data_su ne contenant que les pâquerettes prélevées en milieu semi-urbain
-
-# complétez les ??? de la commande ci-dessous afin de représenter le nombre de fleurs tubulées en fonction de l’année pour les pâquerettes du milieu semi-urbain
-par(mfrow=c(1,1))
-boxplot(Nb_tubu ~ Annee, data = ???)
-# modifiez la commande ci-dessus afin d'ajouter un titre général et à chacun des axes, et de représenter les boîtes en couleur
-
-summary(data_su$Nb_tubu)
-
-# complétez les ??? des  commandes ci-dessous pour créer deux vecteurs contenant le nombre de fleurs tubulées pour une seule année :
-Nb_tubu_2021 = subset(???$Nb_tubu, ???$Annee == "???")
-Nb_tubu_2023 = subset(???$Nb_tubu, ???$Annee == "???")
+Nb_tubu_2023 = subset(data_su$Nb_tubu, data_su$Annee == "2023")
 
 mean(Nb_tubu_2021)
 mean(Nb_tubu_2023)
 
-# tapez ici les commandes permettant de visualiser la distribution du nombre de fleurs tubulées en 2021 et en 2023
-# tapez ici les commandes permettant de réaliser le test de normalité pour le nombre de fleurs tubulées en 2021 et en 2023
+#test de student, parametrique
+#wilcoxon, variance non parametrique (for when one of the data sets are not normale)
+#1. test de normality
+#deux options, normale ou pas. Si pas normale, on peut essayer de transformer avec logarithm. Si ca marche pas, il faut vraiment faire wilcoxon ou autre test parametrique
+#2 test de homoscedacite avec fisher
+#si les donnees ont pas une homoscedacite (meme variance), il faut utiliser student avec correction de welch
 
-var.test(Nb_tubu ~ Annee, data=data_su) 
+#2021
 
-# complétez les ??? de la commande ci-dessous en vous aidant de l'aide de la fonction t.test :
-t.test(Nb_tubu ~ Annee, data=data_su, var.equal = ???, alternative = "two.sided") 
+#1 representation graphique
 
-# tapez ici la commande permettant de réaliser le test de Student
+hist(Nb_tubu_2021)
+#looks to be normal... lets do the test
+shapiro.test(Nb_tubu_2021)
+#p=0.8587, w=0.99357. NORMALE
 
-wilcox.test(Nb_tubu ~ Annee, data=data_su, alternative = "two.sided") 
+#2023
+
+#1 representation graphique
+
+hist(Nb_tubu_2023)
+#looks to be NOT normal... lets do the test
+shapiro.test(Nb_tubu_2023)
+#p=0.98676, w=0.7905. NORMALE
+
+#time for fisher to check if variances are the same
+# ~ means as a function of. so this is number of tubu flowers as a function of the year
+var.test(Nb_tubu ~ Annee, data=data_su)
+#f=0.21159, degrees of freedom = 119 and p is exponentially small. 
+#h1 is variances are not equal, h0 is that they are equal (variances are the same).
+# in this case, the variances are considered the same and the datasets are normal.
+# we use the poly to find that student is the correct test
+
+t.test(Nb_tubu_2021, Nb_tubu_2023, alternative="two.sided", var.equal = TRUE)
+#t = -13.929, degrees of freedom is 180 and p < 2.2e-16
+# we can reject h0 and accept h1. we have detected a significant difference between the average
+#number of tubu flowers in between 2021 and 2023
+
+#Now lets try a wilcoxon test for fun
+
+wilcox.test(Nb_tubu ~ Annee, data = data_su, alternative = "two.sided")
+#W=377 and p < 2.2e-16
+#H1 is the two populations come from different laws (Test non parametrique)
+#H0 is the two populations come from the same laws (Test non parametrique)
+
+#we can now reject h0 and accept h1, the two populations come from different laws. There is a 
+#significant difference between the number of tubu flowers in 2021 and 2023
+
+
+################################################# END OF TP FEB 29 2024 ##########################
+
+data_2023 = subset(data, Annee == "2023")
 
 
 ################
