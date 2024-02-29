@@ -11,13 +11,14 @@ vn_armor
   "tag-colors": {
     "beach": "blue",
     "forest": "green",
-    "female_00_neutral": ""
+    "female_00_neutral": "",
+    "ruins": "blue"
   },
   "zoom": 1
 }
 
 
-:: a-009 {"position":"350,150","size":"100,100"}
+:: a-009 [ruins] {"position":"350,150","size":"100,100"}
 *Alors que je me relève, je me rends compte que mon bras gauche à disparu, pas dans un sens figuré, il y a du vide à la place de celui-ci. Malgré le grand soleil et la beauté du paysage, il n'y a que de l'angoisse dans mon coeur : mon corps...mon corps a toujours été comme ça ?*
 
 [[Ton bras est toujours là, à quelques mètres->a_010]]
@@ -60,25 +61,25 @@ vn_armor
 [[Ne t'arrête pas->a_007]]
 
 
-:: a_007 {"position":"600,150","size":"100,100"}
+:: a_007 [ruins] {"position":"600,150","size":"100,100"}
 *C'est sur cette pensée que je finis ma course dans un grand fracas, les pieds dans les gravats, je me suis effondré la tête la première vers le monde extérieur*
 
 [[Badaboum->a_008]]
 
 
-:: a_008 {"position":"475,150","size":"100,100"}
+:: a_008 [ruins] {"position":"475,150","size":"100,100"}
 *A mon réveil, mon premier réflexe fut de suivre cette mystérieuse créature, je ne sais pas pourquoi j'étais tellement obnubilé par elle que j'en ai même oublié de m'osculter...mais la réalité m'a bien vite rattrapé. Au moment de ma chute il n'y a eu aucune douleur, juste une sensation de lourdeur terrible...et un sentiment de manque.*
 <!--Stressful music-->
 [[Tu n'as pas à avoir peur->a-009]]
 
 
-:: a_010 {"position":"225,150","size":"100,100"}
+:: a_010 [ruins] {"position":"225,150","size":"100,100"}
 *Au sol, je vois un gantelet d'armure à l'aspect vieillot, une horrible pensée me traverse. Pour la première fois je regarde ma main, mon...enveloppe. Une lourde armure me recouvre entièrement pourtant je n'ai jamais senti son poids avant, ce qui est sûr c'est que ce gantelet au sol fait partie de cette armure...*
 
 [[Regarde moi->a_011]]
 
 
-:: a_011 {"position":"225,275","size":"100,100"}
+:: a_011 [ruins] {"position":"225,275","size":"100,100"}
 *Ça ne peut pas être vrai, c'est forcément faux. J'observe les ruines aux alentours espérant trouver quelque chose pouvant éloigner mes craintes *
 
 
@@ -237,6 +238,9 @@ tw-story[tags~="beach"]{
 }
 tw-story[tags~="forest"]{
   background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/forest/forest_pix_1/forest_var_00.png");
+}
+tw-story[tags~="ruins"]{
+  background-image: url("https://raw.githubusercontent.com/jonahdeleseleuc/visual-novel-workspace/main/images/biomes/ruins/ruins_pix_1/ruins_var_00.png");
 }
 
 /*PASSAGE STYLES*/
