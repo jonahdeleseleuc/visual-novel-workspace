@@ -26,7 +26,9 @@ vn_armor
 
 
 :: a-014 {"position":"600,275","size":"100,100"}
-o
+*Une douce voix résonne dans ma tête comme un millier de piqure d'insectes, mon nouveau corps est complètement paralysé, m'obligeant à fixer cet masse grouillante devant moi. La voix résonne encore, moins fort maintenant, j'ai comme l'impression de l'avoir déjà entendue auparavant*
+
+[[J'essaye de te parler depuis ton réveil mais il t'aura fallu un choc pour que tu m'entendes enfin, alors écoute-moi bien. Cette armure est ton corps maintenant, tu vas devoir l'intégrer, mais ne t'en fais pas, je vais t'aider à retrouver ton corps.->a_15]]
 
 
 :: a_001 [forest female_00_neutral no_sound] {"position":"225,25","size":"100,100"}
@@ -48,13 +50,13 @@ o
 
 
 :: a_004 {"position":"600,25","size":"100,100"}
-*J'ai l'impression que mon corps tout entier est en feu mais j'arrive enfin à bouger. Tandis que je me relève difficilement, je m'acclimate doucement à l'obscurité environnante. Mon corps grince, craque et crisse comme les gonds d'une porte mal huilée. Le brouillard devant mes yeux se dissipe lentement et je remarque une petite créature qui me fixe depuis un coin de la pièce. Je m'approche doucement d'elle cherchant à identifier ce que c'est, mais elle fuit dès que je m'approche. J'ai le profond sentiment que je dois la suivre, est-ce qu'elle serait liée à mon passé ?* 
+*J'ai l'impression que mon corps tout entier est en feu mais j'arrive enfin à bouger. Tandis que je me relève difficilement, je m'acclimate doucement à l'obscurité environnante. Mon corps grince, craque et crisse comme les gonds d'une porte mal huilée. Le brouillard devant mes yeux se dissipe lentement et je remarque une petite créature qui me fixe depuis un coin de la pièce. Je m'approche doucement d'elle cherchant à identifier ce que c'est, mais elle fuit dès qu'elle me remarque. J'ai le profond sentiment que je dois la suivre mais pourquoi ?* 
 <!--Low pixel quality cavernous biome, Noody's shade-->
 [[Tu suis la créature en clopinant.->a_005]]
 
 
 :: a_005 {"position":"725,25","size":"100,100"}
-*L'ombre de la créature me guide à travers ce dédale de couloirs exigus, éclairés par la lumière filtrant à travers les vieilles pierres. Je cours encore et encore sans discontinuer, j'ai l'impression que je pourrai aller jusqu'au bout du monde comme ça, le poids qui pesaient sur mes épaules s'envolent, j'ai l'impression de me réveiller d'un long sommeil.*
+*L'ombre de la créature me guide à travers un dédale de couloirs exigus, éclairés par la lumière filtrant à travers les vieilles pierres. Je cours encore et encore sans discontinuer, j'ai l'impression que je pourrai aller jusqu'au bout du monde comme ça, le poids qui pesaient sur mes épaules s'envolent, j'ai l'impression de me réveiller d'un long sommeil.*
 
 [[Regarde où tu marches !->a_006]]
 
@@ -97,9 +99,13 @@ o
 
 
 :: a_013 {"position":"475,275","size":"100,100"}
-*Un cri m'arrête dans ma folie,  je me retourne par réflexe, le morceau de verre toujours en main et pose mes yeux sur une petite créature...en pâtes ? C'est insensé mais la journée est déjà bient trop étrange pour que je puisse attribuer cette vision à la fatigue. En y réfléchissant c'est sans doute elle qui m'a fait sortir du labyrinthe.*
+*Un cri m'arrête dans ma folie,  je me retourne par réflexe, le morceau de miroir toujours en main et pose mes yeux sur une petite créature...en pâtes ? C'est insensé mais la journée est déjà bien trop étrange pour que je puisse attribuer cette vision à la fatigue. En y réfléchissant c'est sans doute elle qui m'a fait sortir du labyrinthe.*
 
 [[J'ai enfin ton attention chevalier.->a-014]]
+
+
+:: a_15 {"position":"725,275","size":"100,100"}
+
 
 
 :: main menu [menu] {"position":"100,225","size":"100,100"}
